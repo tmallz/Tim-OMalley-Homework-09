@@ -24,7 +24,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a shot description of your project: '
+        message: 'Please write a short description of your project: '
     },
     {
         type: 'list',
@@ -36,13 +36,13 @@ const questions = [
         type: 'list',
         name: 'command',
         message: 'What command should be run to install dependencies?',
-        choices: ['npm i', 'choice 2', 'choice 3', 'ect...']
+        choices: ['npm i', 'npm install --save', 'yarn i', 'no dependencies']
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'What commnd should be run to ren tests?',
-        default: 'npm i'
+        message: 'What commnd should be run to run tests?',
+        default: 'npm run test'
     },
     {
         type: 'input',
@@ -63,7 +63,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((responses) => {writeToFile('README.md', generateMarkdown)})
+    inquirer.prompt(questions).then((responses) => {writeToFile('README1.md', generateMarkdown(responses))})
 }
 
 // Function call to initialize app
