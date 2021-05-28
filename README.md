@@ -1,7 +1,5 @@
 # Tim-OMalley-Homework-09
 
-# readme generator;
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 -   this project takes in inputs from the user and then generates a readme for their project based on them
